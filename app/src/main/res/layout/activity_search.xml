@@ -6,7 +6,7 @@
     tools:context="com.hackathon.comfortmobile.SearchActivity">
 
     <ImageView
-        android:id="@+id/image"
+        android:id="@+id/imageView"
         android:layout_width="300dp"
         android:layout_height="300dp"
         android:layout_alignParentStart="true"
@@ -16,20 +16,42 @@
     <SearchView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_toRightOf="@+id/image"
+        android:layout_toRightOf="@+id/imageView"
         android:id="@+id/searchView"
         android:layout_margin="40dp"
         android:queryHint="Hier nach einem Patienten zu suchen"
         android:background="@drawable/background" />
 
-    <ListView
+    <TextView
         android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/resultat"
+        android:text="Resultate"
+        android:layout_below="@+id/searchView"
+        android:layout_toRightOf="@+id/imageView"
+        android:layout_marginLeft="40dp"
+        android:layout_marginBottom="10dp"
+        android:textSize="25sp"/>
+
+    <View android:id="@+id/separator"
+
+        android:background="#FF999999"
+        android:layout_width = "700dp"
+        android:layout_height="2dp"
+        android:layout_below="@+id/resultat"
+        android:layout_toRightOf="@+id/imageView"
+        android:layout_marginLeft="40dp" />
+
+    <ListView
+        android:layout_width="600dp"
         android:layout_height="match_parent"
         android:id="@+id/listViewPatients"
-        android:layout_toRightOf="@+id/image"
-        android:layout_below="@+id/searchView"
-        android:divider="@null"
-        android:dividerHeight="8dp"
+        android:layout_marginLeft="25dp"
+        android:layout_marginTop="10dp"
+        android:layout_toRightOf="@+id/imageView"
+        android:layout_below="@+id/separator"
+
+
         android:drawSelectorOnTop="true"
         android:fastScrollEnabled="true"
         android:scrollbarStyle="outsideOverlay"
@@ -37,6 +59,8 @@
         android:paddingLeft="16dp"
         android:clipToPadding="false"
         android:paddingTop="8dp"
-        android:paddingBottom="8dp" />
+        android:paddingBottom="8dp"
+        android:divider="#FFDDDDDD"
+        android:dividerHeight="2px"/>
 
 </RelativeLayout>
