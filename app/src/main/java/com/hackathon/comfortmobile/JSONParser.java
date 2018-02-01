@@ -14,15 +14,20 @@ import java.util.ArrayList;
 
 public class JSONParser {
 
+
+    private String _errorMessage = "";
+
+    private String _errorCallstack = "";
+
     ArrayList<PatientSuchResult> ParsePateintSuche(String response){
 
         ArrayList<PatientSuchResult> result = new ArrayList<PatientSuchResult>();
 
         if(response != null && response.length() > 0) {
             try{
-                JSONObject jsonResponse = new JSONObject(response);
+                //JSONObject jsonResponse = new JSONObject(response);
 
-                JSONArray patienten = jsonResponse.getJSONArray("");
+                JSONArray patienten = new JSONArray(response); //.getJSONArray("");
 
                 for(int patient = 0; patient < patienten.length(); patient++ ){
                     JSONObject resultPatient = patienten.getJSONObject(patient);
@@ -38,6 +43,9 @@ public class JSONParser {
                 }
             }
             catch(final JSONException e) {
+                _errorMessage = e.getMessage();
+
+                _errorCallstack = e.getStackTrace().toString();
 
             }
         }
