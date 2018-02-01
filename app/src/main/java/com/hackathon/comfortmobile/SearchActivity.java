@@ -23,9 +23,9 @@ public class SearchActivity extends AppCompatActivity {
         searchView = (SearchView) findViewById(R.id.searchView);
         patientListView = (ListView) findViewById(R.id.listViewPatients);
 
-        DummyPatient patientOne = new DummyPatient("Hans Kunz","17.11.1988","P");
-        DummyPatient patientTwo = new DummyPatient("Maria Meiereder","13.03.1950","K");
-        DummyPatient patientThree = new DummyPatient("Thomas Heidrich","02.04.1990","P");
+        DummyPatient patientOne = new DummyPatient("Hans Kunz","17.11.1988","P", "17463856");
+        DummyPatient patientTwo = new DummyPatient("Maria Meiereder","13.03.1950","K","7463");
+        DummyPatient patientThree = new DummyPatient("Thomas Heidrich","02.04.1990","P","12");
 
         patients = new ArrayList<DummyPatient>();
         patients.add(patientOne);

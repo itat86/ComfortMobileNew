@@ -71,6 +71,7 @@ public class PatientAdapter extends BaseAdapter implements ListAdapter{
         TextView nameView = (TextView) convertView.findViewById(R.id.patientName);
         TextView birthdayView = (TextView) convertView.findViewById(R.id.patientBirthday);
         TextView statusView = (TextView) convertView.findViewById(R.id.patientStatus);
+        TextView idView = (TextView) convertView.findViewById(R.id.patientId);
 
         final DummyPatient dummyPatient = getItem(position);
 
@@ -79,6 +80,7 @@ public class PatientAdapter extends BaseAdapter implements ListAdapter{
             nameView.setText(dummyPatient.getName());
             birthdayView.setText(dummyPatient.getBirthday());
             statusView.setText(dummyPatient.getStatus());
+            idView.setText(dummyPatient.getId());
 
             //birthdayView.setVisibility(View.VISIBLE);
             //birthdayView.setText(body);
