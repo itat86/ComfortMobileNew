@@ -24,7 +24,7 @@ import java.util.ArrayList;
 public class PatientAdapter extends BaseAdapter implements ListAdapter{
 
     private Context context;
-    private ArrayList<DummyPatient> adapterData;
+    private ArrayList<PatientSuchResult> adapterData;
     private LayoutInflater inflater;
 
     /**
@@ -48,7 +48,7 @@ public class PatientAdapter extends BaseAdapter implements ListAdapter{
     }
 
     @Override
-    public DummyPatient getItem(int position) {
+    public PatientSuchResult getItem(int position) {
         if (this.adapterData != null)
             return this.adapterData.get(position);
 
@@ -71,16 +71,14 @@ public class PatientAdapter extends BaseAdapter implements ListAdapter{
         TextView nameView = (TextView) convertView.findViewById(R.id.patientName);
         TextView birthdayView = (TextView) convertView.findViewById(R.id.patientBirthday);
         TextView statusView = (TextView) convertView.findViewById(R.id.patientStatus);
-        TextView idView = (TextView) convertView.findViewById(R.id.patientId);
 
-        final DummyPatient dummyPatient = getItem(position);
+        final PatientSuchResult patient = getItem(position);
 
-        if (dummyPatient != null) {
+        if (patient != null) {
 
-            nameView.setText(dummyPatient.getName());
-            birthdayView.setText(dummyPatient.getBirthday());
-            statusView.setText(dummyPatient.getStatus());
-            idView.setText(dummyPatient.getId());
+            nameView.setText(patient.getAnzeigeName());
+            birthdayView.setText(patient.getGeburstdatum());
+            statusView.setText(patient.getVersichertenArt());
 
             //birthdayView.setVisibility(View.VISIBLE);
             //birthdayView.setText(body);
