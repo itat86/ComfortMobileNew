@@ -1,5 +1,7 @@
 package com.hackathon.comfortmobile;
 
+import android.app.Fragment;
+import android.app.FragmentManager;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
@@ -77,11 +79,17 @@ public class MainActivity extends AppCompatActivity
     @SuppressWarnings("StatementWithEmptyBody")
     @Override
     public boolean onNavigationItemSelected(MenuItem item) {
+
+        Fragment fragment = new ImportantFragment();
+        FragmentManager fragmentManager = getFragmentManager();
+
         // Handle navigation view item clicks here.
         int id = item.getItemId();
 
         if (id == R.id.nav_important) {
             // Handle the camera action
+            fragment = new ImportantFragment();
+
         } else if (id == R.id.nav_kb) {
 
         } else if (id == R.id.nav_vd) {
@@ -91,6 +99,10 @@ public class MainActivity extends AppCompatActivity
         } else if (id == R.id.nav_zusatz) {
 
         }
+
+        fragmentManager.beginTransaction()
+                .replace(R.id.frame, fragment)
+                .commit();
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         drawer.closeDrawer(GravityCompat.START);
