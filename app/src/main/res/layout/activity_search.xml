@@ -83,4 +83,13 @@
         android:divider="#FFDDDDDD"
         android:dividerHeight="2px"/>
 
+    <Button
+        android:layout_width="150dp"
+        android:text="Impressum"
+        android:textAllCaps="false"
+        android:textAlignment="textStart"
+        android:layout_alignParentBottom="true"
+        android:layout_margin="-5dp"
+        android:layout_height="wrap_content" />
+
 </RelativeLayout>
