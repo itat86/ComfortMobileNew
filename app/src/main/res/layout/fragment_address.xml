@@ -1,0 +1,282 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.hackathon.comfortmobile.AddressFragment">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:name="@+name/containerDetail"
+        android:layout_marginTop="10dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/name"
+            android:text="Jan Zischler"
+            android:maxLines="1"
+            android:textSize="25sp"
+            android:layout_marginLeft="20dp"
+            />
+
+        <ImageView
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:id="@+id/gender"
+
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="5dp"
+            android:layout_toRightOf="@+id/name"
+            android:src="@drawable/maennlich2"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/birthday"
+            android:text="03.04.1989 (28)      K"
+            android:layout_marginLeft="50dp"
+
+            android:layout_toRightOf="@id/gender"
+            android:maxLines="1"
+            android:textSize="25sp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/nummer"
+            android:text="Nr: 12"
+
+            android:layout_alignParentRight="true"
+            android:maxLines="1"
+            android:textSize="25sp"
+            android:layout_marginRight="20dp"/>
+
+        <View android:id="@+id/sep"
+            android:background="#FF999999"
+            android:layout_width = "match_parent"
+            android:layout_height="2dp"
+            android:layout_below="@+id/name"
+            android:layout_marginTop="10dp"
+            />
+
+        <TextView
+            android:layout_width="400dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/sep"
+            android:layout_marginTop="30dp"
+            android:layout_marginLeft="20dp"
+            android:maxLines="1"
+            android:textSize="25sp"
+            android:text="Strasse:"
+            android:id="@+id/kname"
+            android:textColor="#FF999999"/>
+
+        <TextView
+            android:layout_width="400dp"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/kname"
+            android:layout_below="@+id/sep"
+            android:layout_marginTop="30dp"
+            android:layout_marginLeft="20dp"
+            android:maxLines="1"
+            android:textSize="25sp"
+            android:text="Gaustadter Haupstraße"
+            android:id="@+id/kassein"/>
+
+        <TextView
+            android:layout_width="400dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/kname"
+            android:layout_marginTop="30dp"
+            android:layout_marginLeft="20dp"
+            android:maxLines="1"
+            android:textSize="25sp"
+            android:text="Hausnummer:"
+            android:id="@+id/kenn"
+            android:textColor="#FF999999"/>
+
+        <TextView
+            android:layout_width="400dp"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/kenn"
+            android:layout_below="@+id/kassein"
+            android:layout_marginTop="30dp"
+            android:layout_marginLeft="20dp"
+            android:maxLines="1"
+            android:textSize="25sp"
+            android:text="100"
+            android:id="@+id/kennin"/>
+
+        <TextView
+            android:layout_width="400dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/kenn"
+            android:layout_marginTop="30dp"
+            android:layout_marginLeft="20dp"
+            android:maxLines="1"
+            android:textSize="25sp"
+            android:text="Addresszusatz:"
+            android:id="@+id/unter"
+            android:textColor="#FF999999"/>
+
+        <TextView
+            android:layout_width="400dp"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/unter"
+            android:layout_below="@+id/kennin"
+            android:layout_marginTop="30dp"
+            android:layout_marginLeft="20dp"
+            android:maxLines="1"
+            android:textSize="25sp"
+            android:text="Am Eck"
+            android:id="@+id/gruppein"/>
+
+        <TextView
+            android:layout_width="400dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/unter"
+            android:layout_marginTop="30dp"
+            android:layout_marginLeft="20dp"
+            android:maxLines="1"
+            android:textSize="25sp"
+            android:text="Land:"
+            android:id="@+id/art"
+            android:textColor="#FF999999"/>
+
+        <TextView
+            android:layout_width="400dp"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/art"
+            android:layout_below="@+id/gruppein"
+            android:layout_marginTop="30dp"
+            android:layout_marginLeft="20dp"
+            android:maxLines="1"
+            android:textSize="25sp"
+            android:text="Deutschland"
+            android:id="@+id/artin"/>
+
+        <TextView
+            android:layout_width="400dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/art"
+            android:layout_marginTop="30dp"
+            android:layout_marginLeft="20dp"
+            android:maxLines="1"
+            android:textSize="25sp"
+            android:text="PLZ:"
+            android:id="@+id/als"
+            android:textColor="#FF999999"/>
+
+        <TextView
+            android:layout_width="400dp"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/als"
+            android:layout_below="@+id/artin"
+            android:layout_marginTop="30dp"
+            android:layout_marginLeft="20dp"
+            android:maxLines="1"
+            android:textSize="25sp"
+            android:text="96049"
+            android:id="@+id/alsin"/>
+
+        <TextView
+            android:layout_width="400dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/als"
+            android:layout_marginTop="30dp"
+            android:layout_marginLeft="20dp"
+            android:maxLines="1"
+            android:textSize="25sp"
+            android:text="Ort:"
+            android:id="@+id/bes"
+            android:textColor="#FF999999"   />
+
+        <TextView
+            android:layout_width="400dp"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/bes"
+            android:layout_below="@+id/alsin"
+            android:layout_marginTop="30dp"
+            android:layout_marginLeft="20dp"
+            android:maxLines="1"
+            android:textSize="25sp"
+            android:text="Bamberg"
+            android:id="@+id/besin"/>
+
+        <TextView
+            android:layout_width="400dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/bes"
+            android:layout_marginTop="30dp"
+            android:layout_marginLeft="20dp"
+            android:maxLines="1"
+            android:textSize="25sp"
+            android:text="Telefonnummer:"
+            android:id="@+id/dmp"
+            android:textColor="#FF999999"/>
+
+        <TextView
+            android:layout_width="400dp"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/dmp"
+            android:layout_below="@+id/besin"
+            android:layout_marginTop="30dp"
+            android:layout_marginLeft="20dp"
+            android:maxLines="1"
+            android:textSize="25sp"
+            android:text="0951 9335-132"
+            android:id="@+id/dmpin"/>
+
+        <TextView
+            android:layout_width="400dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/dmp"
+            android:layout_marginTop="30dp"
+            android:layout_marginLeft="20dp"
+            android:maxLines="1"
+            android:textSize="25sp"
+            android:text="Weitere Kontaktdaten:"
+            android:id="@+id/weitere"
+            android:textColor="#FF999999"/>
+
+        <TextView
+            android:layout_width="400dp"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/weitere"
+            android:layout_below="@+id/dmpin"
+            android:layout_marginTop="30dp"
+            android:layout_marginLeft="20dp"
+            android:maxLines="1"
+            android:textSize="25sp"
+            android:text="Tel. Team C: 0951 9335-181"
+            android:id="@+id/weitin"/>
+
+        <TextView
+            android:layout_width="400dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/weitere"
+            android:layout_marginTop="30dp"
+            android:layout_marginLeft="20dp"
+            android:maxLines="1"
+            android:textSize="25sp"
+            android:text="WOP-Kennzeichen:"
+            android:id="@+id/wop"
+            android:textColor="#FF999999"/>
+
+        <TextView
+            android:layout_width="400dp"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/wop"
+            android:layout_below="@+id/weitin"
+            android:layout_marginTop="30dp"
+            android:layout_marginLeft="20dp"
+            android:maxLines="1"
+            android:textSize="25sp"
+            android:text="28"
+            android:id="@+id/wopin"/>
+
+    </RelativeLayout>
+
+</FrameLayout>

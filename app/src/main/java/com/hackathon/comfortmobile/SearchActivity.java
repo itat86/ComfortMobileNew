@@ -37,7 +37,6 @@ public class SearchActivity extends AppCompatActivity implements HttpRequestComp
                 doSearch(query);
                 InputMethodManager imm = (InputMethodManager)getSystemService(Context.INPUT_METHOD_SERVICE);
                 imm.hideSoftInputFromWindow(searchView.getWindowToken(),0);
-                //searchView.clearFocus();
 
 
                 return true;

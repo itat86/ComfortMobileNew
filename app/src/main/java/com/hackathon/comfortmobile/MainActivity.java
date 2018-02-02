@@ -98,13 +98,16 @@ public class MainActivity extends AppCompatActivity
             fragment = new ImportantFragment();
 
         } else if (id == R.id.nav_kb) {
+            fragment = new KBFragment();
 
         } else if (id == R.id.nav_vd) {
             fragment = new InsuranceFragment();
 
         } else if (id == R.id.nav_adresse) {
+            fragment = new AddressFragment();
 
         } else if (id == R.id.nav_zusatz) {
+            fragment = new ZusatzFragment();
 
         }
 
