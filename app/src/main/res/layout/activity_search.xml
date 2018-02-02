@@ -31,23 +31,24 @@
         android:layout_toRightOf="@+id/imageView"
         android:layout_marginLeft="40dp"
         android:layout_marginBottom="10dp"
-        android:textSize="25sp"/>
+        android:textSize="20sp"/>
 
     <View android:id="@+id/separator"
 
         android:background="#FF999999"
-        android:layout_width = "700dp"
+        android:layout_width = "800dp"
         android:layout_height="2dp"
         android:layout_below="@+id/resultat"
         android:layout_toRightOf="@+id/imageView"
         android:layout_marginLeft="40dp" />
 
     <ListView
-        android:layout_width="600dp"
+        android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:id="@+id/listViewPatients"
         android:layout_marginLeft="25dp"
         android:layout_marginTop="10dp"
+        android:paddingEnd="100dp"
         android:layout_toRightOf="@+id/imageView"
         android:layout_below="@+id/separator"
 

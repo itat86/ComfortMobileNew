@@ -10,6 +10,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.ImageButton;
+import android.widget.ImageView;
 import android.widget.ListAdapter;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
@@ -68,9 +69,11 @@ public class PatientAdapter extends BaseAdapter implements ListAdapter{
 
         //RelativeLayout relativeLayout = (RelativeLayout) convertView.findViewById(R.id.relativeLayout);
 
+        ImageView genderView = (ImageView) convertView.findViewById(R.id.patientGender);
         TextView nameView = (TextView) convertView.findViewById(R.id.patientName);
         TextView birthdayView = (TextView) convertView.findViewById(R.id.patientBirthday);
         TextView statusView = (TextView) convertView.findViewById(R.id.patientStatus);
+        TextView idView = (TextView) convertView.findViewById(R.id.patientId);
 
         final PatientSuchResult patient = getItem(position);
 
@@ -79,6 +82,18 @@ public class PatientAdapter extends BaseAdapter implements ListAdapter{
             nameView.setText(patient.getAnzeigeName());
             birthdayView.setText(patient.getGeburstdatum());
             statusView.setText(patient.getVersichertenArt());
+            idView.setText(patient.getPatientNr());
+
+            String gender = patient.getGeschlecht();
+            if(gender.equals("W"))
+            {
+                genderView.setImageResource(R.drawable.weiblich2);
+            }
+            if(gender.equals("M"))
+            {
+                genderView.setImageResource(R.drawable.maennlich2);
+            }
+
 
             //birthdayView.setVisibility(View.VISIBLE);
             //birthdayView.setText(body);

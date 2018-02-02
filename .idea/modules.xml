@@ -2,10 +2,8 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://E:\TestApplikationen\Hackathon2018\ComfortMobileNew\ComfortMobile.iml" filepath="E:\TestApplikationen\Hackathon2018\ComfortMobileNew\ComfortMobile.iml" />
-      <module fileurl="file://$PROJECT_DIR$/ComfortMobileNew.iml" filepath="$PROJECT_DIR$/ComfortMobileNew.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ComfortMobile.iml" filepath="$PROJECT_DIR$/ComfortMobile.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
-      <module fileurl="file://E:\TestApplikationen\Hackathon2018\ComfortMobileNew\app\app.iml" filepath="E:\TestApplikationen\Hackathon2018\ComfortMobileNew\app\app.iml" />
     </modules>
   </component>
 </project>
