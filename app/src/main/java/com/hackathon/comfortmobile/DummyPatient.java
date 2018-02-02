@@ -4,7 +4,7 @@ import android.os.Parcel;
 import android.os.Parcelable;
 
 /**
- * Created by praxis on 01.02.2018.
+ * Created by praxis on 01.02.2018. gaga
  */
 
 public class DummyPatient implements Parcelable{
