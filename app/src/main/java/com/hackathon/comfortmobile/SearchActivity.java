@@ -1,16 +1,19 @@
 package com.hackathon.comfortmobile;
 
 import android.content.Context;
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 import android.widget.SearchView;
 
 import java.util.ArrayList;
 
-public class SearchActivity extends AppCompatActivity implements HttpRequestCompleted{
+public class SearchActivity extends AppCompatActivity implements HttpRequestCompleted, AdapterView.OnItemClickListener{
 
     private SearchView searchView;
     private ListView patientListView;
@@ -40,6 +43,7 @@ public class SearchActivity extends AppCompatActivity implements HttpRequestComp
                 return false;
             }
         });
+        patientListView.setOnItemClickListener(this);
     }
 
     public void onTaskCompleteSuccess(String response){
@@ -58,5 +62,31 @@ public class SearchActivity extends AppCompatActivity implements HttpRequestComp
     private void doSearch(String query){
         HttpHandler handler = new HttpHandler(this, getApplicationContext());
         handler.RequestPatientenByNr(query);
+    }
+
+    @Override
+    public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+        Intent intent = new Intent(this, MainActivity.class);
+        startActivity(intent);
+
+       /* Intent intent = new Intent(this, EntryActivity.class);
+        intent.addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
+        intent.setClass(this, EntryActivity.class);
+        intent.putExtra("Uniqid","From_Scrapbook_Activity");
+
+        // If search is active -> use position from realIndexesOfSearchResults for EditActivity
+        if (searchActive) {
+            int newPosition = realIndexesOfSearchResults.get(position);
+            intent.putExtra("ENTRY", entries.get(newPosition));
+            intent.putExtra(ENTRY_REQUEST_CODE, newPosition);
+            startActivity(intent);
+        }
+
+        // If search is not active -> use normal position for EditActivity
+        else {
+            intent.putExtra("ENTRY", entries.get(position));
+            intent.putExtra(ENTRY_REQUEST_CODE, position);
+            startActivity(intent);
+        }*/
     }
 }
