@@ -100,6 +100,7 @@ public class MainActivity extends AppCompatActivity
         } else if (id == R.id.nav_kb) {
 
         } else if (id == R.id.nav_vd) {
+            fragment = new InsuranceFragment();
 
         } else if (id == R.id.nav_adresse) {
 

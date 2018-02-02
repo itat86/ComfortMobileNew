@@ -1,0 +1,235 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.hackathon.comfortmobile.InsuranceFragment">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:name="@+name/containerDetail"
+        android:layout_marginTop="10dp">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/name"
+        android:text="Jan Zischler"
+        android:maxLines="1"
+        android:textSize="25sp"
+        android:layout_marginLeft="20dp"
+        />
+
+    <ImageView
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:id="@+id/gender"
+
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="5dp"
+        android:layout_toRightOf="@+id/name"
+        android:src="@drawable/maennlich2"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/birthday"
+        android:text="03.04.1989 (28)      K"
+        android:layout_marginLeft="50dp"
+
+        android:layout_toRightOf="@id/gender"
+        android:maxLines="1"
+        android:textSize="25sp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/nummer"
+        android:text="Nr: 12"
+
+        android:layout_alignParentRight="true"
+        android:maxLines="1"
+        android:textSize="25sp"
+        android:layout_marginRight="20dp"/>
+
+    <View android:id="@+id/sep"
+        android:background="#FF999999"
+        android:layout_width = "match_parent"
+        android:layout_height="2dp"
+        android:layout_below="@+id/name"
+        android:layout_marginTop="10dp"
+        />
+        
+        <TextView
+            android:layout_width="400dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/sep"
+            android:layout_marginTop="30dp"
+            android:layout_marginLeft="20dp"
+            android:maxLines="1"
+            android:textSize="25sp"
+            android:text="Kassenname:"
+            android:id="@+id/kname"
+            android:textColor="#FF999999"/>
+
+        <TextView
+            android:layout_width="400dp"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/kname"
+            android:layout_below="@+id/sep"
+            android:layout_marginTop="30dp"
+            android:layout_marginLeft="20dp"
+            android:maxLines="1"
+            android:textSize="25sp"
+            android:text="HEK - Hanseatische Krankenkasse"
+            android:id="@+id/kassein"/>
+
+        <TextView
+            android:layout_width="400dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/kname"
+            android:layout_marginTop="30dp"
+            android:layout_marginLeft="20dp"
+            android:maxLines="1"
+            android:textSize="25sp"
+            android:text="Kennung:"
+            android:id="@+id/kenn"
+            android:textColor="#FF999999"/>
+
+        <TextView
+            android:layout_width="400dp"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/kenn"
+            android:layout_below="@+id/kassein"
+            android:layout_marginTop="30dp"
+            android:layout_marginLeft="20dp"
+            android:maxLines="1"
+            android:textSize="25sp"
+            android:text="101570104"
+            android:id="@+id/kennin"/>
+
+        <TextView
+            android:layout_width="400dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/kenn"
+            android:layout_marginTop="30dp"
+            android:layout_marginLeft="20dp"
+            android:maxLines="1"
+            android:textSize="25sp"
+            android:text="Kostenträgeruntergruppe:"
+            android:id="@+id/unter"
+            android:textColor="#FF999999"/>
+
+        <TextView
+            android:layout_width="400dp"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/unter"
+            android:layout_below="@+id/kennin"
+            android:layout_marginTop="30dp"
+            android:layout_marginLeft="20dp"
+            android:maxLines="1"
+            android:textSize="25sp"
+            android:text="101570104"
+            android:id="@+id/gruppein"/>
+
+        <TextView
+            android:layout_width="400dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/unter"
+            android:layout_marginTop="30dp"
+            android:layout_marginLeft="20dp"
+            android:maxLines="1"
+            android:textSize="25sp"
+            android:text="Versicherungsart:"
+            android:id="@+id/art"
+            android:textColor="#FF999999"/>
+
+        <TextView
+            android:layout_width="400dp"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/art"
+            android:layout_below="@+id/gruppein"
+            android:layout_marginTop="30dp"
+            android:layout_marginLeft="20dp"
+            android:maxLines="1"
+            android:textSize="25sp"
+            android:text="Gesetzlich"
+            android:id="@+id/artin"/>
+
+        <TextView
+            android:layout_width="400dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/art"
+            android:layout_marginTop="30dp"
+            android:layout_marginLeft="20dp"
+            android:maxLines="1"
+            android:textSize="25sp"
+            android:text="Versichert als:"
+            android:id="@+id/als"
+            android:textColor="#FF999999"/>
+
+        <TextView
+            android:layout_width="400dp"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/als"
+            android:layout_below="@+id/artin"
+            android:layout_marginTop="30dp"
+            android:layout_marginLeft="20dp"
+            android:maxLines="1"
+            android:textSize="25sp"
+            android:text="Mitglied"
+            android:id="@+id/alsin"/>
+
+        <TextView
+            android:layout_width="400dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/als"
+            android:layout_marginTop="30dp"
+            android:layout_marginLeft="20dp"
+            android:maxLines="1"
+            android:textSize="25sp"
+            android:text="Besondere Personengruppe:"
+            android:id="@+id/bes"
+            android:textColor="#FF999999"   />
+
+        <TextView
+            android:layout_width="400dp"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/bes"
+            android:layout_below="@+id/alsin"
+            android:layout_marginTop="30dp"
+            android:layout_marginLeft="20dp"
+            android:maxLines="1"
+            android:textSize="25sp"
+
+            android:id="@+id/besin"/>
+
+        <TextView
+            android:layout_width="400dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/bes"
+            android:layout_marginTop="30dp"
+            android:layout_marginLeft="20dp"
+            android:maxLines="1"
+            android:textSize="25sp"
+            android:text="DMP-Kennung:"
+            android:id="@+id/dmp"
+            android:textColor="#FF999999"/>
+
+        <TextView
+            android:layout_width="400dp"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/dmp"
+            android:layout_below="@+id/besin"
+            android:layout_marginTop="30dp"
+            android:layout_marginLeft="20dp"
+            android:maxLines="1"
+            android:textSize="25sp"
+            android:text="Asthma bronchiale"
+            android:id="@+id/dmpin"/>
+
+
+    </RelativeLayout>
+
+</FrameLayout>
