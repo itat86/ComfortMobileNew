@@ -130,7 +130,7 @@
             android:layout_marginLeft="20dp"
             android:maxLines="1"
             android:textSize="25sp"
-            android:text="101570104"
+            android:text="keine (00)"
             android:id="@+id/gruppein"/>
 
         <TextView
