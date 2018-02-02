@@ -19,7 +19,7 @@
         android:layout_toRightOf="@+id/imageView"
         android:id="@+id/searchView"
         android:layout_margin="40dp"
-        android:queryHint="Hier nach einem Patienten zu suchen"
+        android:queryHint="Hier nach einem Patienten suchen"
         android:background="@drawable/background" />
 
     <TextView
