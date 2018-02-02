@@ -13,11 +13,22 @@ public class DummyPatient implements Parcelable{
     private String birthday;
     private String status;
 
-    public DummyPatient(String name, String birthday, String status)
+    public String getId() {
+        return id;
+    }
+
+    public void setId(String id) {
+        this.id = id;
+    }
+
+    private String id;
+
+    public DummyPatient(String name, String birthday, String status, String id)
     {
         this.name = name;
         this.birthday = birthday;
         this.status = status;
+        this.id = id;
     }
 
     protected DummyPatient(Parcel in) {
