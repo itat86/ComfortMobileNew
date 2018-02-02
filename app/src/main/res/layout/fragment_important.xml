@@ -4,10 +4,276 @@
     android:layout_height="match_parent"
     tools:context="com.hackathon.comfortmobile.ImportantFragment">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
+    <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+        android:name="@+name/containerDetail"
+        android:layout_marginTop="10dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/name"
+            android:text="Jan Zischler"
+            android:maxLines="1"
+            android:textSize="25sp"
+            android:layout_marginLeft="20dp"
+            />
+
+        <ImageView
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:id="@+id/gender"
+
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="5dp"
+            android:layout_toRightOf="@+id/name"
+            android:src="@drawable/maennlich2"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/birthday"
+            android:text="03.04.1989 (28)      K"
+            android:layout_marginLeft="50dp"
+
+            android:layout_toRightOf="@id/gender"
+            android:maxLines="1"
+            android:textSize="25sp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/nummer"
+            android:text="Nr: 12"
+
+            android:layout_alignParentRight="true"
+            android:maxLines="1"
+            android:textSize="25sp"
+            android:layout_marginRight="20dp"/>
+
+        <View android:id="@+id/sep"
+            android:background="#FF999999"
+            android:layout_width = "match_parent"
+            android:layout_height="2dp"
+            android:layout_below="@+id/name"
+            android:layout_marginTop="10dp"
+            />
+
+        <RelativeLayout
+            android:layout_width="400dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/sep"
+            android:layout_marginTop="20dp"
+            android:background="#FFDDDDDD"
+            android:layout_marginLeft="20dp"
+            android:id="@+id/All"
+            android:padding="10dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Allgemeines"
+                android:textSize="20sp"
+                android:id="@+id/allgemein"/>
+
+            <View android:id="@+id/sep2"
+                android:background="#FF999999"
+                android:layout_width = "match_parent"
+                android:layout_height="2dp"
+                android:layout_below="@+id/allgemein"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Chipkarte nicht eingelesen (Q1)"
+                android:textSize="20sp"
+                android:id="@+id/karte"
+                android:layout_below="@id/sep2"/>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="400dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/sep"
+            android:layout_toRightOf="@id/All"
+            android:layout_marginTop="20dp"
+            android:background="#FFDDDDDD"
+            android:layout_marginLeft="20dp"
+            android:padding="10dp"
+            android:id="@+id/diag">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Dauerdiagnosen"
+                android:textSize="20sp"
+                android:id="@+id/dauer"/>
+
+            <View android:id="@+id/sep3"
+                android:background="#FF999999"
+                android:layout_width = "match_parent"
+                android:layout_height="2dp"
+                android:layout_below="@+id/dauer"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Asthma bronchiale (J45.9) (G)"
+                android:textSize="20sp"
+                android:id="@+id/ast"
+                android:layout_below="@id/sep3"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Asthma durch Heu (J45.0) (G)"
+                android:textSize="20sp"
+                android:id="@+id/ast2"
+                android:layout_below="@id/ast"
+                android:layout_marginTop="10dp"/>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="400dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/diag"
+            android:layout_toRightOf="@id/All"
+            android:layout_marginTop="20dp"
+            android:background="#FFDDDDDD"
+            android:layout_marginLeft="20dp"
+            android:padding="10dp"
+            android:id="@+id/kenn">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="DMP-Kennung"
+                android:textSize="20sp"
+                android:id="@+id/dmp"/>
+
+            <View android:id="@+id/sep4"
+                android:background="#FF999999"
+                android:layout_width = "match_parent"
+                android:layout_height="2dp"
+                android:layout_below="@+id/dmp"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Asthma bronchiale"
+                android:textSize="20sp"
+                android:id="@+id/bronch"
+                android:layout_below="@id/sep4"/>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="400dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/kenn"
+            android:layout_toRightOf="@id/All"
+            android:layout_marginTop="20dp"
+            android:background="#FFDDDDDD"
+            android:layout_marginLeft="20dp"
+            android:padding="10dp"
+            android:id="@+id/grossen">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Gefährdungsgrössen"
+                android:textSize="20sp"
+                android:id="@+id/rauch"/>
+
+            <View android:id="@+id/sep5"
+                android:background="#FF999999"
+                android:layout_width = "match_parent"
+                android:layout_height="2dp"
+                android:layout_below="@+id/rauch"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Heuschnupfen"
+                android:textSize="20sp"
+                android:id="@+id/heu"
+                android:layout_below="@id/sep5"
+                />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Verstärkte Hustenanfälle"
+                android:textSize="20sp"
+                android:id="@+id/hust"
+                android:layout_below="@id/heu"
+                android:layout_marginTop="10dp"/>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="400dp"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/diag"
+            android:layout_below="@+id/sep"
+            android:layout_marginTop="20dp"
+            android:background="#FFDDDDDD"
+            android:layout_marginLeft="20dp"
+            android:padding="10dp"
+            android:id="@+id/medis">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Dauermedikamente"
+                android:textSize="20sp"
+                android:id="@+id/dauerm"/>
+
+            <View android:id="@+id/sep6"
+                android:background="#FF999999"
+                android:layout_width = "match_parent"
+                android:layout_height="2dp"
+                android:layout_below="@+id/dauerm"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="BUDES N 0.2MG DOS.AEROSOL"
+                android:textSize="20sp"
+                android:id="@+id/budes"
+                android:layout_below="@id/sep6"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="MOMETASON ABZ 50UG NASENSP"
+                android:textSize="20sp"
+                android:id="@+id/nase"
+                android:layout_below="@id/budes"
+                android:layout_marginTop="10dp"/>
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+
 
 </FrameLayout>
